@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strategi Blackjack Premium</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-cards"></i> Strategi Blackjack Premium</h1>
+            <p>Alat canggih untuk membantu Anda membuat keputusan optimal dalam permainan Blackjack berdasarkan strategi dasar 8 deck</p>
+        </header>
+        
+        <div class="app-container">
+            <div class="input-section">
+                <h2 class="section-title"><i class="fas fa-user-tie"></i> Kartu Dealer</h2>
+                <div class="input-group">
+                    <label>Pilih kartu dealer yang terlihat:</label>
+                    <div class="card-selector" id="dealer-cards"></div>
+                    <div class="dealer-card">
+                        <div id="selected-dealer-card">Belum dipilih</div>
+                    </div>
+                </div>
+                
+                <h2 class="section-title"><i class="fas fa-user"></i> Kartu Anda</h2>
+                <div class="input-group">
+                    <label>Pilih dua kartu pertama Anda:</label>
+                    <div class="card-selector" id="player-cards"></div>
+                    <div class="selected-cards">
+                        <div class="player-card-display" id="player-card-1">?</div>
+                        <div class="player-card-display" id="player-card-2">?</div>
+                    </div>
+                </div>
+                
+                <div class="button-group">
+                    <button id="get-advice-btn" class="btn primary">
+                        <i class="fas fa-lightbulb"></i> Dapatkan Saran
+                    </button>
+                    <button id="reset-btn" class="btn secondary">
+                        <i class="fas fa-redo"></i> Reset
+                    </button>
+                </div>
+            </div>
+            
+            <div class="result-section">
+                <h2 class="section-title"><i class="fas fa-chart-line"></i> Saran Strategi</h2>
+                
+                <div class="advice-container">
+                    <div id="advice-result" class="advice">Pilih kartu Anda</div>
+                    <div id="special-advice" class="special-advice"></div>
+                    
+                    <div class="action-explanation">
+                        <div class="explanation-title"><i class="fas fa-info-circle"></i> Penjelasan Tindakan:</div>
+                        <div id="action-details">Pilih kartu dealer dan kartu Anda untuk mendapatkan saran strategi</div>
+                    </div>
+                </div>
+                
+                <div class="stats">
+                    <div class="stat-item">
+                        <div class="stat-value">8</div>
+                        <div class="stat-label">DECK</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">0.5%</div>
+                        <div class="stat-label">HOUSE EDGE</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">S17</div>
+                        <div class="stat-label">DEALER STAND</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="instructions">
+            <h2><i class="fas fa-graduation-cap"></i> Panduan Strategi</h2>
+            <div class="strategy-points">
+                <div class="strategy-item">
+                    <div class="strategy-icon hit"><i class="fas fa-plus-circle"></i></div>
+                    <div class="strategy-content">
+                        <h3>HIT (Ambil Kartu)</h3>
+                        <p>Ambil kartu tambahan ketika nilai kartu Anda rendah atau dealer memiliki kartu kuat (7-A)</p>
+                    </div>
+                </div>
+                <div class="strategy-item">
+                    <div class="strategy-icon stand"><i class="fas fa-hand-paper"></i></div>
+                    <div class="strategy-content">
+                        <h3>STAND (Berdiri)</h3>
+                        <p>Pertahankan kartu saat ini ketika nilai sudah cukup tinggi atau dealer memiliki kartu lemah (2-6)</p>
+                    </div>
+                </div>
+                <div class="strategy-item">
+                    <div class="strategy-icon double"><i class="fas fa-times-circle"></i></div>
+                    <div class="strategy-content">
+                        <h3>DOUBLE (Gandakan)</h3>
+                        <p>Gandakan taruhan ketika memiliki kartu awal kuat (9-11) dan dealer menunjukkan kartu lemah</p>
+                    </div>
+                </div>
+                <div class="strategy-item">
+                    <div class="strategy-icon split"><i class="fas fa-code-branch"></i></div>
+                    <div class="strategy-content">
+                        <h3>SPLIT (Pisahkan)</h3>
+                        <p>Pisahkan kartu sepasang untuk memainkan dua tangan terpisah, terutama untuk As dan 8</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>© 2023 Blackjack Strategy Pro | Dikembangkan untuk permainan dengan 8 deck | Dealer berdiri di soft 17</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
